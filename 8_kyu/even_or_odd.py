@@ -5,4 +5,4 @@
 
 
 def even_or_odd(number):
-    return 'Odd' if number & 0x1 else 'Even'
+    return 'Odd' if number & 0b1 else 'Even'
