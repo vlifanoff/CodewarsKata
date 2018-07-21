@@ -21,13 +21,9 @@ data = [
 
 
 def solution(roman):
-    arab = 0
+    if roman == '':
+        return 0
 
-    while len(roman) > 0:
-        for x in data:
-            if roman.startswith(x[0]):
-                arab += x[1]
-                roman = roman[len(x[0]):]
-                break
-
-    return arab
+    for x in data:
+        if roman.startswith(x[0]):
+            return x[1] + solution(roman[len(x[0]):])
