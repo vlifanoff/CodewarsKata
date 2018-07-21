@@ -5,6 +5,5 @@
 
 
 def anagrams(word, words):
-    sword = ''.join(sorted(word))
-    h = {x: ''.join(sorted(x)) for x in words}
-    return [x for x in words if h[x] == sword]
+    sw = sorted(word)
+    return [x for x in words if sw == sorted(x)]
