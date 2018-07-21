@@ -21,9 +21,8 @@ data = [
 
 
 def solution(roman):
-    if roman == '':
-        return 0
-
     for x in data:
         if roman.startswith(x[0]):
             return x[1] + solution(roman[len(x[0]):])
+
+    return 0
