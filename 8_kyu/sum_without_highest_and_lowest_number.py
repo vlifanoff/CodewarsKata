@@ -5,6 +5,4 @@
 
 
 def sum_array(arr):
-    if arr == None: return 0
-    if len(arr) < 2: return 0
-    return sum(sorted(arr)[1:-1])
+    return 0 if arr is None or len(arr) < 2 else sum(sorted(arr)[1:-1])
