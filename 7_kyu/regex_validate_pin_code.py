@@ -7,4 +7,4 @@ import re
 
 
 def validate_pin(pin):
-    return True if re.compile("^(?:\d{4}|\d{6})$").match(pin) else False
+    return bool(re.compile("^(?:\d{4}|\d{6})$").match(pin))
