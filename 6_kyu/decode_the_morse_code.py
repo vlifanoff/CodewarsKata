@@ -18,3 +18,8 @@ chart_morse = {
 
 def decodeMorse(morseCode):
     return ''.join([chart_morse[x] for x in re.findall(r'[\.-]+|\s{3}', morseCode.strip())])
+
+
+def decodeMorse2(morseCode):
+    """The Morse code table is preloaded as a dictionary MORSE_CODE."""
+    return ''.join([' ' if ' ' in x else MORSE_CODE[x] for x in re.findall(r'[\.-]+|\s{3}', morseCode.strip())])
