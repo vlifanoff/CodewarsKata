@@ -10,7 +10,6 @@ def tower_builder(n_floors):
 
     for i in range(1, n_floors + 1):
         d = i * 2 - 1
-        ws = ' ' * ((size - d) / 2)
-        l.append(ws + ('*' * d) + ws)
+        l.append(str('*' * d).center(size, ' '))
 
     return l
