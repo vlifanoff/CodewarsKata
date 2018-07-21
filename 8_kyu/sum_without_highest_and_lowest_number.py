@@ -5,12 +5,6 @@
 
 
 def sum_array(arr):
-    if arr == None:
-        return 0
-
-    counter = len(arr) - 1
-
-    if counter < 1:
-        return 0
-
-    return sum(sorted(arr)[1:counter])
+    if arr == None: return 0
+    if len(arr) < 2: return 0
+    return sum(sorted(arr)[1:-1])
