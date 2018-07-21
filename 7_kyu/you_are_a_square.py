@@ -11,4 +11,4 @@ def is_square(n):
         return False
 
     tmp = int(math.sqrt(n))
-    return True if n / tmp == tmp else False
+    return bool(n / tmp == tmp)
